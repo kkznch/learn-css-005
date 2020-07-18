@@ -1,5 +1,6 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import kekezun from "../../assets/images/kekezun.png";
 
 const Wrapper = styled.div`
   height: 100%;
@@ -13,7 +14,7 @@ const Content = styled.div`
 
 const Circle = styled.div`
   position: absolute;
-  border: solid 2px;
+  border: 2px solid;
   border-radius: 50%;
   top: 0;
   left: 0;
@@ -22,9 +23,22 @@ const Circle = styled.div`
   margin: auto;
 `;
 
+const Guruguru = keyframes`
+from {
+  transform: rotate(0deg);
+}
+to {
+  transform: rotate(360deg);
+}
+`;
+
 const Circle1 = styled(Circle)`
   height: 512px;
   width: 512px;
+  animation-name: ${Guruguru};
+  animation-duration: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 `;
 
 const Circle2 = styled(Circle)`
@@ -45,6 +59,9 @@ const Circle4 = styled(Circle)`
 const Circle5 = styled(Circle)`
   height: 82%;
   width: 82%;
+  background-image: url(${kekezun});
+  background-size: contain;
+  background-repeat: no-repeat;
 `;
 
 const Symbol = styled.div`
@@ -62,16 +79,16 @@ const Symbol1 = styled(Symbol)`
 `;
 
 const Symbol2 = styled(Symbol)`
-  top: 15%;
+  top: 20%;
   bottom: 0;
-  right: 12%;
+  right: 8%;
   margin: auto;
 `;
 
 const Symbol3 = styled(Symbol)`
-  top: 74%;
+  top: 70%;
   bottom: 0;
-  right: 11%;
+  right: 8%;
   margin: auto;
 `;
 
@@ -83,17 +100,66 @@ const Symbol4 = styled(Symbol)`
 `;
 
 const Symbol5 = styled(Symbol)`
-  top: 76%;
+  top: 70%;
   bottom: 0;
-  left: 14%;
+  left: 8%;
   margin: auto;
 `;
 
 const Symbol6 = styled(Symbol)`
-  top: 15%;
+  top: 20%;
   bottom: 0;
-  left: 12%;
+  left: 8%;
   margin: auto;
+`;
+
+const Square = styled.div`
+  position: absolute;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 85%;
+  height: 50%;
+`;
+
+const Square1 = styled(Square)`
+  transform: rotate(0deg);
+`;
+
+const Square2 = styled(Square)`
+  transform: rotate(120deg);
+`;
+
+const Square3 = styled(Square)`
+  transform: rotate(240deg);
+`;
+
+const Triangle = styled.div`
+  position: absolute;
+  border-top: 2px solid;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 85%;
+  height: 50%;
+`;
+
+const Triangle1 = styled(Triangle)`
+  transform: rotate(0deg);
+`;
+
+const Triangle2 = styled(Triangle)`
+  transform: rotate(120deg);
+`;
+
+const Triangle3 = styled(Triangle)`
+  transform: rotate(240deg);
 `;
 
 export default () => {
@@ -109,6 +175,12 @@ export default () => {
             <Symbol5>ℵ</Symbol5>
             <Symbol6>♀</Symbol6>
             <Circle3>
+              <Square1></Square1>
+              <Square2></Square2>
+              <Square3></Square3>
+              <Triangle1></Triangle1>
+              <Triangle2></Triangle2>
+              <Triangle3></Triangle3>
               <Circle4>
                 <Circle5></Circle5>
               </Circle4>
