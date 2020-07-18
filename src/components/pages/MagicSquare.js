@@ -10,12 +10,14 @@ const Wrapper = styled.div`
 const Content = styled.div`
   height: 100%;
   width: 100%;
+  transform: perspective(500px) rotateX(60deg);
 `;
 
 const Circle = styled.div`
   position: absolute;
-  border: 2px solid;
+  border: 2px solid white;
   border-radius: 50%;
+  box-shadow: 0px 0px 32px 3px white;
   top: 0;
   left: 0;
   bottom: 0;
@@ -36,7 +38,7 @@ const Circle1 = styled(Circle)`
   height: 512px;
   width: 512px;
   animation-name: ${Guruguru};
-  animation-duration: 0s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 `;
@@ -68,6 +70,7 @@ const Symbol = styled.div`
   position: absolute;
   font-size: 2.4rem;
   font-weight: bold;
+  color: white;
   text-align: center;
 `;
 
@@ -115,8 +118,8 @@ const Symbol6 = styled(Symbol)`
 
 const Square = styled.div`
   position: absolute;
-  border-left: 2px solid;
-  border-right: 2px solid;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
   top: 0;
   bottom: 0;
   left: 0;
@@ -140,7 +143,7 @@ const Square3 = styled(Square)`
 
 const Triangle = styled.div`
   position: absolute;
-  border-top: 2px solid;
+  border-top: 2px solid white;
   top: 0;
   bottom: 0;
   left: 0;
